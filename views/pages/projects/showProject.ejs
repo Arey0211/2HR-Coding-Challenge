@@ -1,0 +1,30 @@
+<% include ../../partials/header %>
+
+<div class="ui main text container segment">
+  <div class="ui huge header"> <%= project.title %> </div>
+  <div class="ui top attched segment">
+    <h3>Project Manager</h3>
+    <span><%= project.manager %></span>
+  </div>
+  <div class="ui segment">
+    <h3>Description</h3>
+    <p>
+      <%= project.description %>
+    </p>
+  </div>
+  <div class="ui segment">
+      <h3>Tasks</h3>
+      <% project.tasks.forEach(function(task){ %>
+          <p class="ui large header tasks">
+            <%= task.text %>
+          </p>
+      <% }); %>
+    </div>
+  <form action="/projects/<%= project._id %>?_method=DELETE" method="POST">
+    <a class="ui primary huge inverted button" href="/projects/<%= project._id %>/edit">EDIT</a>
+    <a class="ui green huge inverted button" href="/projects/<%= project._id %>/tasks/new">Add Task</a>
+    <button class="ui red huge inverted button" type="submit">DELETE</button>
+  </form>
+</div>
+
+<% include ../../partials/footer %>

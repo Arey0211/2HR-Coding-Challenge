@@ -1,0 +1,14 @@
+<% include ../../partials/header %>
+
+<div class="ui main text container segment">
+  <div class="ui huge inverted header">New Task</div>
+  <form action="/projects/<%= project._id %>/tasks" method="POST" class="ui form focus">
+    <div class="field">
+      <label>Task</label>
+      <input type="text" name="task[text]" placeholder="New Task" required>
+    </div>
+    <input class="ui inverted green button huge" type="submit" name="submitBtn">
+  </form>
+</div>
+
+<% include ../../partials/footer %>

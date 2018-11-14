@@ -1,0 +1,67 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.nav {
+  width: 80%;
+  margin: 20px auto 125px auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.left,
+.logo,
+i {
+  float: left;
+}
+
+.logo {
+  margin-left: 20px;
+  position: relative;
+  transform: translateY(-50%);
+}
+
+.right {
+  float: right;
+}
+
+.right li {
+  list-style: none;
+  margin: auto 15px;
+  display: inline-block;
+  font-size: 32px;
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+  font-weight: bolder;
+}
+
+.footer {
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}
+
+.bg-clr {
+  background-color: rgba(0,0,0,0.05) !important;
+}
+
+.tasks {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}

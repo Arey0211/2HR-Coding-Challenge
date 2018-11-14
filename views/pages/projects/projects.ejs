@@ -1,0 +1,18 @@
+<% include ../../partials/header %>
+
+<div class="ui main text container segment bg-clr">
+  <% projects.forEach(function(project){ %>
+    <div class="ui segment">
+        <h1><%= project.title %></h1>
+        <h3><%= project.manager %></h3>
+        <div class="ui segment">
+          <p>
+            <%= project.description %>...
+          </p>
+          <a class="ui huge inverted primary button" href="/projects/<%= project._id %>">Read More...</a>
+        </div>
+    </div>
+    <% }); %>
+</div>
+
+<% include ../../partials/footer %>
